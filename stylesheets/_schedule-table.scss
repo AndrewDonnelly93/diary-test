@@ -1,0 +1,13 @@
+.schedule-table {
+  @include border-box;
+  position: relative;
+  border-collapse: collapse;
+  border: 1px solid $gray;
+  width: 100%;
+  @include border-radius(3px);
+}
+
+.schedule-table td,
+.schedule-table th {
+  width: 1/7 * 100%;
+}

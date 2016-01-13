@@ -1,0 +1,64 @@
+$base-color: #fff;
+$layout-width: 940px;
+$schedule-lesson-h: 95px;
+$black: #303030;
+$gray: #d1d4d5;
+$dark-blue: #58595b;
+$green: #75c13f;
+$light-green: #c5e3b2;
+$yellow: #ffd300;
+$silver: #c5c5c5;
+$dark-gray: #818284;
+$dark-black: #000;
+$blue: #0087af;
+$light-blue: #00aee0;
+$middle-gray: #6f6f6f;
+$light-gray: #ddd;
+$extralight-gray: #e3e5e6;
+$extralight-blue: #f5fcff;
+$pink: #e072b8;
+$middle-green: #86bf7d;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  position: relative;
+  font: {
+    family: "Open Sans", sans-serif;
+    size: 14px;
+    weight: 400;
+  }
+}
+
+.clearfix {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.layout-center-wrapper {
+  position: relative;
+  width: $layout-width;
+  margin: 0 auto;
+}
+
+table,
+td,
+tr,
+th {
+  border: 0;
+}
+
+%vertical-line {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+}
+
+

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>Расписание</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=latin,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
+  <link href="stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="stylesheets/main.css" media="screen" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <header class="page-header">
+    <div class="layout-center-wrapper clearfix">
+      <div class="calendar-title calendar-title--left clearfix">
+        <div class="calendar-title__name calendar-title__name--left">Календарь</div>
+        <a href="#" class="question-mark question-mark--left"></a>
+      </div>
+
+      <div class="schedule-marks schedule-marks--right">
+        <div class="schedule-marks__mark schedule-marks__mark--left">
+          <div class="color-mark color-mark--left color-mark--green"></div><!--
+          --><div class="schedule-mark__text">По плану</div>
+        </div><!--
+
+        --><div class="schedule-marks__mark schedule-marks__mark--left">
+          <div class="color-mark color-mark--left color-mark--yellow"></div><!--
+          --><div class="schedule-mark__text">Изменения</div>
+        </div><!--
+
+        --><div class="schedule-marks__mark schedule-marks__mark--left">
+          <div class="color-mark color-mark--left color-mark--silver"></div><!--
+          --><div class="schedule-mark__text">Отмена</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="schedule">
+    <div class="layout-center-wrapper">
+      <table class="schedule-table">
+
+        <thead class="schedule-table__header">
+          <tr>
+            <th class="schedule-today-cell" colspan="2">
+              <div class="btn btn--round-corners">Сегодня</div>
+            </th>
+
+            <th class="schedule-date-cell" colspan="3">
+              <a href="#" class="btn btn--round-corners btn--arrow-left">
+                <div class="small-arrow small-arrow--left"></div>
+              </a>
+
+              <div class="schedule-date">3-9&nbsp;сентября&nbsp;2014&nbsp;г.</div>
+
+              <a href="#" class="btn btn--round-corners btn--arrow-right">
+                <div class="small-arrow small-arrow--right"></div>
+              </a>
+            </th>
+
+            <th class="schedule-time-tabs-cell" colspan="2">
+              <ul class="time-tabs">
+                <li><a class="btn btn--left-border" href="#">Месяц</a></li><!--
+                --><li><a class="btn btn--left-border btn--active" href="#">Неделя</a></li><!--
+                --><li><a class="btn" href="#">День</a></li>
+              </ul>
+            </th>
+          </tr>
+        </thead>
+
+        <tbody class="schedule-table__content">
+          <tr class="schedule-titles">
+            <td class="schedule-titles__title">3 Пн</td>
+            <td class="schedule-titles__title schedule-titles__title--current schedule-titles__title--holiday">
+              4 Вт (<span class="schedule-title-descr">cегодня</span>)
+            </td>
+            <td class="schedule-titles__title">5 Ср</td>
+            <td class="schedule-titles__title">6 Чт</td>
+            <td class="schedule-titles__title">7 Пн</td>
+            <td class="schedule-titles__title">8 Сб</td>
+            <td class="schedule-titles__title">9 Вс</td>
+          </tr>
+
+          <tr class="schedule-hour-row">
+            <td class="schedule-hour-row__lesson-cell schedule--monday">
+              <div class="schedule-hour-time">08:00</div>
+            </td>
+
+            <td class="schedule-hour-row__lesson-cell schedule-hour-row__lesson-cell--current schedule--tuesday">
+              <section class="schedule-lesson schedule-lesson--30">
+                <div class="schedule-lesson__time">8:30-9:10</div>
+                <div class="schedule-lesson__subject-class">Биология, 8А</div>
+                <div class="schedule-lesson__cabinet">Каб. 103</div>
+              </section>
+            </td>
+
+            <td class="schedule-hour-row__lesson-cell schedule--wednesday">
+              <section class="schedule-lesson schedule-lesson--30">
+                <div class="schedule-lesson__time">8:30-9:10</div>
+                <div class="schedule-lesson__subject-class">Биология, 8А</div>
+                <div class="schedule-lesson__cabinet">Каб. 103</div>
+              </section>
+            </td>
+
+            <td class="schedule-hour-row__lesson-cell schedule--thursday">
+              <section class="schedule-lesson schedule-lesson--30">
+                <div class="schedule-lesson__time">8:30-9:10</div>
+                <div class="schedule-lesson__subject-class">Биология, 8А</div>
+                <div class="schedule-lesson__cabinet">Каб. 103</div>
+              </section>
+            </td>
+
+            <td class="schedule-hour-row__lesson-cell schedule--friday"></td>
+
+            <td class="schedule-hour-row__lesson-cell schedule--saturday"></td>
+
+            <td class="schedule-hour-row__lesson-cell schedule-hour-row__lesson-cell--holiday schedule--sunday">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <script src="javascripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+$color-mark-size: 10px;
+
+.color-mark {
+  display: inline-block;
+  position: relative;
+  @include border-radius(50%);
+  @include size($color-mark-size, $color-mark-size);
+}
+
+.color-mark--left {
+  margin-right: 10px;
+}
+
+.color-mark--green {
+  background: $green;
+}
+
+.color-mark--yellow {
+  background: $yellow;
+}
+
+.color-mark--silver {
+  background: $silver;
+}

@@ -1,0 +1,21 @@
+.schedule-marks__mark {
+  display: inline-block;
+  position: relative;
+}
+
+.schedule-marks__mark--left {
+  margin-right: 18px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.schedule-mark__text {
+  display: inline-block;
+  font: {
+    size: 12px;
+    weight: 600;
+  }
+  color: $black;
+}
+

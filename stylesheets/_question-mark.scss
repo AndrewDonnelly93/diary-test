@@ -1,0 +1,14 @@
+$question-mark-size: 19px;
+
+.question-mark {
+  @include size($question-mark-size, $question-mark-size);
+  position: relative;
+  background: url("../img/question.png") 0 0 no-repeat;
+  display: block;
+}
+
+.question-mark--left {
+  float: left;
+  top: 3px;
+  margin-left: 13px;
+}

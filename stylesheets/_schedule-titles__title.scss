@@ -1,0 +1,18 @@
+$schedule-titles__title-h: 30px;
+
+.schedule-titles__title {
+  text-align: center;
+  color: $dark-blue;
+  height: $schedule-titles__title-h;
+  font: {
+    size: 12px;
+  }
+  border-bottom: 1px solid $gray;
+}
+
+.schedule-titles__title--current {
+  font: {
+    weight: 600;
+  }
+  color: $light-blue;
+}

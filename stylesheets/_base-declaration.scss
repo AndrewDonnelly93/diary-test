@@ -1,0 +1,73 @@
+%text-overflow {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline-width: 0;
+  background: 0;
+}
+
+input:focus {
+  outline-width: 0;
+}
+
+input {
+  outline: 0;
+  outline-width: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+// Mixin declaration
+
+@mixin size($width,$height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin border-box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin text-shadow($text-shadows...) {
+  -moz-text-shadow: $text-shadows;
+  -o-text-shadow: $text-shadows;
+  text-shadow: $text-shadows;
+}
+
+@mixin box-shadow($box-shadows...) {
+  -webkit-box-shadow: $box-shadows;
+  -moz-box-shadow: $box-shadows;
+  box-shadow: $box-shadows;
+}
+
+@mixin transform($transform-param) {
+  transform: $transform-param;
+  -moz-transform: $transform-param;
+  -ms-transform: $transform-param;
+  -o-transform: $transform-param;
+  -webkit-transform: $transform-param;
+}
+
+%full-absolute {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}

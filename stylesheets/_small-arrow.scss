@@ -1,0 +1,21 @@
+$small-arrow-width: 5px;
+
+.small-arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  display: inline-block;
+  position: relative;
+}
+
+.small-arrow--left {
+  left: - $small-arrow-width + 2;
+  border-width: $small-arrow-width $small-arrow-width $small-arrow-width 0;
+  border-color: transparent $dark-gray transparent transparent;
+}
+
+.small-arrow--right {
+  right: $small-arrow-width - 3;
+  border-width: $small-arrow-width 0 $small-arrow-width $small-arrow-width;
+  border-color: transparent transparent transparent $dark-gray;
+}

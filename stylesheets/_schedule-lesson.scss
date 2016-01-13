@@ -1,0 +1,33 @@
+$single-schedule-lesson-h: 70px;
+
+.schedule-lesson {
+  position: absolute;
+  left: 0;
+  right: -1px;
+  z-index: 3;
+  background: $light-green;
+  min-height: $single-schedule-lesson-h;
+  @include border-box;
+  padding: 10px 7px;
+  text-align: left;
+  border: 1px solid $middle-green;
+  @include box-shadow(inset 0 2px 0 rgba($base-color, .75));
+}
+
+@for $i from 0 through 11 {
+  .schedule-lesson--#{$i*5} {
+    top: 1/12 * $i * $schedule-lesson-h;
+  }
+}
+
+.schedule-lesson__time {
+
+}
+
+.schedule-lesson__subject-class {
+
+}
+
+.schedule-lesson__cabinet {
+
+}

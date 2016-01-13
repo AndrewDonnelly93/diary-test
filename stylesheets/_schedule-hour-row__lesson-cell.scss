@@ -1,0 +1,37 @@
+.schedule-hour-row__lesson-cell {
+  position: relative;
+  height: $schedule-lesson-h;
+  border: 1px solid;
+  border-color: $light-gray $extralight-gray;
+  &:first-child {
+    border-left: 1px solid $gray;
+  }
+  &:last-child {
+    border-right: 1px solid $gray;
+  }
+}
+
+.schedule-hour-time {
+  position: absolute;
+  top: 4px;
+  left: -20px;
+  @include transform(rotate(270deg));
+  color: $middle-gray;
+  font-size: 10px;
+}
+
+.schedule-hour-row__lesson-cell--current {
+  &:before {
+    @extend %full-absolute;
+    background: transparent;
+    border-left: 1px solid $light-blue;
+    border-right: 1px solid $light-blue
+  }
+  background: $extralight-blue;
+}
+
+.schedule-hour-row__lesson-cell--holiday {
+  background: $pink !important;
+  background: rgba($pink, .1) !important;
+}
+
