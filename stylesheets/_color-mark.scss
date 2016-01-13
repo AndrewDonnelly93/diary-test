@@ -1,4 +1,5 @@
 $color-mark-size: 10px;
+$small-color-mark-size: 8px;
 
 .color-mark {
   display: inline-block;
@@ -11,14 +12,33 @@ $color-mark-size: 10px;
   margin-right: 10px;
 }
 
-.color-mark--green {
+.color-mark--plan {
   background: $green;
 }
 
-.color-mark--yellow {
+.color-mark--replace {
   background: $yellow;
 }
 
-.color-mark--silver {
+.color-mark--abort {
   background: $silver;
 }
+
+@for $i from 1 through 2 {
+  .color-mark__homework--#{$i} {
+    @include size($small-color-mark-size, $small-color-mark-size);
+    position: absolute;
+    top: 5px;
+    left: 0;
+  }
+}
+
+.color-mark__homework--1 {
+  background: $bright-pink;
+}
+
+.color-mark__homework--2 {
+  background: $bright-green;
+}
+
+

@@ -1,0 +1,198 @@
+$lesson-popup: 250px;
+$lesson-desc-margin-bottom: 10px;
+$lesson-popup__close-btn-h: 25px;
+$lesson-popup-flag-w: 11px;
+$lesson-popup-flag-h: 14px;
+
+%lesson-popup--active {
+  .lesson-popup__title {
+    opacity: .8;
+    .lesson-title {
+      color: $lighter-blue;
+    }
+  }
+}
+
+@mixin lesson-popup-arrow($color) {
+  &:after, &:before {
+    right: 100%;
+    top: 30px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  &:after {
+    border-color: rgba($color, 0);
+    border-right-color: $color;
+    border-width: 7px;
+    margin-top: -7px;
+  }
+  &:before {
+    border-color: rgba($middle-blue, 0);
+    border-right-color: $middle-blue;
+    border-width: 8px;
+    margin-top: -8px;
+  }
+
+}
+
+.lesson-popup {
+  display: none;
+  position: absolute;
+  z-index: 5;
+  text-align: left;
+  width: $lesson-popup;
+  padding: 14px 20px 25px;
+  @include border-box;
+  @include border-radius(3px);
+  border: 1px solid $middle-blue;
+  @include box-shadow(0 0 10px rgba($dark-black, .1));
+  &:hover {
+    @extend %lesson-popup--active;
+  }
+  bottom: auto;
+}
+
+.lesson-popup--active {
+  @extend %lesson-popup--active;
+}
+
+.lesson-popup--1 {
+  background: $base-color;
+  @include lesson-popup-arrow($base-color);
+}
+
+.lesson-popup--2 {
+  background: $light-pink;
+  @include lesson-popup-arrow($light-pink);
+}
+
+.lesson-popup--3 {
+  background: $violet;
+  @include lesson-popup-arrow($violet);
+}
+
+.lesson-popup__close-btn-section {
+  text-align: right;
+}
+
+.lesson-popup__close-btn {
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #d1d3d4;
+  @include border-box;
+  @include border-radius(3px);
+  background-color: rgb(238, 241, 244);
+  background-color: rgba(238, 241, 244, 0.4);
+  @include box-shadow(inset 0 2px 0 rgba(255, 255, 255, .75));
+  height: $lesson-popup__close-btn-h;
+  line-height: $lesson-popup__close-btn-h - 2;
+  padding: 0 14px;
+  color: $other-black;
+  font: {
+    size: 13px;
+    weight: 600;
+  }
+  @include text-shadow(0 1px 0 $dark-black);
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.lesson-popup--left {
+  left: 15px;
+  right: auto;
+}
+
+.lesson-popup--right {
+  right: - $lesson-popup;
+  left: auto;
+}
+
+.lesson-popup--bottom {
+  bottom: 0;
+  top: auto;
+}
+
+.lesson-popup--top{
+  top: 0;
+  bottom: auto;
+}
+
+.lesson-popup--active {
+  display: block !important;
+}
+
+.lesson-popup__line {
+  @include size(100%, 1px);
+  margin-bottom: $lesson-desc-margin-bottom - 3;
+  background: $extralight-gray;
+}
+
+.lesson-popup__header {
+  color: $other-black;
+  margin-bottom: $lesson-desc-margin-bottom - 3;
+  font-weight: 600;
+}
+
+.lesson-popup__descr {
+  font: {
+    size: 13px;
+  }
+  color: $dark-brown;
+  margin-bottom: $lesson-desc-margin-bottom;
+  line-height: 1.2;
+}
+
+.lesson-homework {
+  @include border-box;
+  padding-left: 15px;
+  position: relative;
+  font: {
+    size: 13px;
+  }
+  color: $dark-brown;
+  @extend %text-overflow;
+}
+
+.lesson-popup__descr--cabinet {
+  font-size: 14px;
+}
+
+.lesson-popup__homework {
+  margin-bottom: $lesson-desc-margin-bottom;
+}
+
+.lesson-popup__line--small-margin {
+  margin-bottom: $lesson-desc-margin-bottom - 5;
+}
+
+.lesson-popup__header--small-margin {
+  margin-bottom: $lesson-desc-margin-bottom - 5;
+}
+
+.lesson-popup__replace {
+  font: {
+    size: 13px;
+    weight: 600;
+  }
+  color: $other-black;
+  @include border-box;
+  padding-left: 20px;
+  position: relative;
+  &:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    @include size($lesson-popup-flag-w, $lesson-popup-flag-h);
+    background: url("../img/flag.png") 0 0 no-repeat;
+    z-index: 2;
+  }
+  margin-bottom: $lesson-desc-margin-bottom - 3;
+}
+
+
+

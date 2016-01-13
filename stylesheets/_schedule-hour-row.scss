@@ -1,6 +1,7 @@
 .schedule-hour-row {
   position: relative;
   height: $schedule-lesson-h;
+  @include border-box;
   &:last-child .schedule-hour-row__lesson-cell {
     border-bottom: 1px solid $gray;
   }

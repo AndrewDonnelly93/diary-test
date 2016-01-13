@@ -1,17 +1,46 @@
-$single-schedule-lesson-h: 70px;
+$single-schedule-lesson-h: 68px;
 
 .schedule-lesson {
   position: absolute;
-  left: 0;
+  left: -1px;
   right: -1px;
-  z-index: 3;
-  background: $light-green;
+  z-index: 5;
   min-height: $single-schedule-lesson-h;
   @include border-box;
-  padding: 10px 7px;
+  padding: 6px 7px;
   text-align: left;
+}
+
+.schedule-lesson--double {
+  height: 2 * $single-schedule-lesson-h;
+}
+
+.schedule-lesson--plan {
   border: 1px solid $middle-green;
   @include box-shadow(inset 0 2px 0 rgba($base-color, .75));
+  background: $light-green;
+}
+
+.schedule-lesson--replace {
+  border: 1px solid $bright-yellow;
+  @include box-shadow(inset 0 2px 0 rgba($base-color, .75));
+  background: $light-yellow;
+}
+
+.schedule-lesson--active {
+  border: 1px solid $darkest-green;
+  @include box-shadow(inset 0 2px 0 rgba($base-color, .75));
+  background: $green;
+}
+
+%schedule-lesson--abort {
+  color: $other-gray !important;
+  @include text-shadow(0 1px 0 rgba($base-color, .5));
+}
+
+.schedule-lesson--abort {
+  background: $most-lighter-gray;
+  border: 1px dashed $lighter-gray;
 }
 
 @for $i from 0 through 11 {
@@ -21,13 +50,73 @@ $single-schedule-lesson-h: 70px;
 }
 
 .schedule-lesson__time {
-
+  color: $dark-green;
+  font: {
+    size: 12px;
+    weight: 600;
+  }
 }
 
 .schedule-lesson__subject-class {
-
+  margin-top: 3px;
+  font: {
+    size: 13px;
+    weight: 600;
+  }
+  @include text-shadow(0 1px 0 rgba($base-color, .5));
+  color: $middle-black;
+  line-height: 1;
 }
 
 .schedule-lesson__cabinet {
-
+  margin-top: 1px;
+  font: {
+    size: 13px;
+  }
+  @include text-shadow(0 1px 0 rgba($base-color, .5));
+  color: $black;
 }
+
+%schedule-lesson--active {
+  color: $base-color !important;
+  @include text-shadow(0 -1px 0 rgba($darkest-blue, .5));
+}
+
+.schedule-lesson__time--abort {
+  @extend %schedule-lesson--abort;
+  opacity: .7;
+}
+
+.schedule-lesson__subject-class--abort {
+  @extend %schedule-lesson--abort;
+}
+
+.schedule-lesson__cabinet--abort {
+  @extend %schedule-lesson--abort;
+}
+
+.schedule-lesson__time--replace {
+  color: $brown;
+  @include text-shadow(0 1px 0 rgba($base-color, .5));
+}
+
+.schedule-lesson__subject-class--replace {
+  @include text-shadow(0 1px 0 rgba($base-color, .5));
+}
+
+.schedule-lesson__cabinet--replace {
+  @include text-shadow(0 1px 0 rgba($base-color, .5));
+}
+
+.schedule-lesson__cabinet--active {
+  @extend %schedule-lesson--active;
+}
+
+.schedule-lesson__subject-class--active {
+  @extend %schedule-lesson--active;
+}
+
+.schedule-lesson__cabinet--active {
+  @extend %schedule-lesson--active;
+}
+

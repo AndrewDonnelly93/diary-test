@@ -25,6 +25,11 @@ tr,
 th {
   border: 0; }
 
+.lesson-homework {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
 button {
   border: 0;
   outline: 0;
@@ -106,14 +111,34 @@ input {
 .color-mark--left {
   margin-right: 10px; }
 
-.color-mark--green {
+.color-mark--plan {
   background: #75c13f; }
 
-.color-mark--yellow {
+.color-mark--replace {
   background: #ffd300; }
 
-.color-mark--silver {
+.color-mark--abort {
   background: #c5c5c5; }
+
+.color-mark__homework--1 {
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 5px;
+  left: 0; }
+
+.color-mark__homework--2 {
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 5px;
+  left: 0; }
+
+.color-mark__homework--1 {
+  background: #ff6c62; }
+
+.color-mark__homework--2 {
+  background: #3db733; }
 
 .page-header {
   padding: 25px 0 23px;
@@ -235,15 +260,21 @@ input {
 
 .schedule-hour-row {
   position: relative;
-  height: 95px; }
+  height: 100px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
   .schedule-hour-row:last-child .schedule-hour-row__lesson-cell {
     border-bottom: 1px solid #d1d4d5; }
 
 .schedule-hour-row__lesson-cell {
   position: relative;
-  height: 95px;
+  height: 100px;
   border: 1px solid;
-  border-color: #dddddd #e3e5e6; }
+  border-color: #dddddd #e3e5e6;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
   .schedule-hour-row__lesson-cell:first-child {
     border-left: 1px solid #d1d4d5; }
   .schedule-hour-row__lesson-cell:last-child {
@@ -261,9 +292,66 @@ input {
   color: #6f6f6f;
   font-size: 10px; }
 
+.schedule-current-time {
+  position: absolute;
+  left: 0;
+  width: 939px;
+  background: #00bbe7;
+  height: 1px;
+  z-index: 4; }
+  .schedule-current-time:before {
+    content: "";
+    position: absolute;
+    background: #00bbe7;
+    width: 7px;
+    height: 7px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    left: -7px;
+    top: -3.5px; }
+
+.schedule-current-time--0 {
+  top: 0px; }
+
+.schedule-current-time--5 {
+  top: 8.33333px; }
+
+.schedule-current-time--10 {
+  top: 16.66667px; }
+
+.schedule-current-time--15 {
+  top: 25px; }
+
+.schedule-current-time--20 {
+  top: 33.33333px; }
+
+.schedule-current-time--25 {
+  top: 41.66667px; }
+
+.schedule-current-time--30 {
+  top: 50px; }
+
+.schedule-current-time--35 {
+  top: 58.33333px; }
+
+.schedule-current-time--40 {
+  top: 66.66667px; }
+
+.schedule-current-time--45 {
+  top: 75px; }
+
+.schedule-current-time--50 {
+  top: 83.33333px; }
+
+.schedule-current-time--55 {
+  top: 91.66667px; }
+
 .schedule-hour-row__lesson-cell--current {
   background: #f5fcff; }
   .schedule-hour-row__lesson-cell--current:before {
+    left: -1px;
+    right: -1px;
     background: transparent;
     border-left: 1px solid #00aee0;
     border-right: 1px solid #00aee0; }
@@ -274,53 +362,369 @@ input {
 
 .schedule-lesson {
   position: absolute;
-  left: 0;
+  left: -1px;
   right: -1px;
-  z-index: 3;
-  background: #c5e3b2;
-  min-height: 70px;
+  z-index: 5;
+  min-height: 68px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 10px 7px;
-  text-align: left;
+  padding: 6px 7px;
+  text-align: left; }
+
+.schedule-lesson--double {
+  height: 136px; }
+
+.schedule-lesson--plan {
   border: 1px solid #86bf7d;
   -webkit-box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.75);
   -moz-box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.75);
-  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.75); }
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.75);
+  background: #c5e3b2; }
+
+.schedule-lesson--replace {
+  border: 1px solid #ffc700;
+  -webkit-box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.75);
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.75);
+  background: #ffed97; }
+
+.schedule-lesson--active {
+  border: 1px solid #308c37;
+  -webkit-box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.75);
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.75);
+  background: #75c13f; }
+
+.schedule-lesson__time--abort, .schedule-lesson__subject-class--abort, .schedule-lesson__cabinet--abort {
+  color: #828282 !important;
+  -moz-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  -o-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); }
+
+.schedule-lesson--abort {
+  background: #eaeaea;
+  border: 1px dashed #a2a2a2; }
 
 .schedule-lesson--0 {
   top: 0px; }
 
 .schedule-lesson--5 {
-  top: 7.91667px; }
+  top: 8.33333px; }
 
 .schedule-lesson--10 {
-  top: 15.83333px; }
+  top: 16.66667px; }
 
 .schedule-lesson--15 {
-  top: 23.75px; }
+  top: 25px; }
 
 .schedule-lesson--20 {
-  top: 31.66667px; }
+  top: 33.33333px; }
 
 .schedule-lesson--25 {
-  top: 39.58333px; }
+  top: 41.66667px; }
 
 .schedule-lesson--30 {
-  top: 47.5px; }
+  top: 50px; }
 
 .schedule-lesson--35 {
-  top: 55.41667px; }
+  top: 58.33333px; }
 
 .schedule-lesson--40 {
-  top: 63.33333px; }
+  top: 66.66667px; }
 
 .schedule-lesson--45 {
-  top: 71.25px; }
+  top: 75px; }
 
 .schedule-lesson--50 {
-  top: 79.16667px; }
+  top: 83.33333px; }
 
 .schedule-lesson--55 {
-  top: 87.08333px; }
+  top: 91.66667px; }
+
+.schedule-lesson__time {
+  color: #627a5d;
+  font-size: 12px;
+  font-weight: 600; }
+
+.schedule-lesson__subject-class {
+  margin-top: 3px;
+  font-size: 13px;
+  font-weight: 600;
+  -moz-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  -o-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  color: #060606;
+  line-height: 1; }
+
+.schedule-lesson__cabinet {
+  margin-top: 1px;
+  font-size: 13px;
+  -moz-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  -o-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  color: #303030; }
+
+.schedule-lesson__cabinet--active, .schedule-lesson__subject-class--active {
+  color: white !important;
+  -moz-text-shadow: 0 -1px 0 rgba(0, 76, 4, 0.5);
+  -o-text-shadow: 0 -1px 0 rgba(0, 76, 4, 0.5);
+  text-shadow: 0 -1px 0 rgba(0, 76, 4, 0.5); }
+
+.schedule-lesson__time--abort {
+  opacity: .7; }
+
+.schedule-lesson__time--replace {
+  color: #967e1a;
+  -moz-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  -o-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); }
+
+.schedule-lesson__subject-class--replace {
+  -moz-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  -o-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); }
+
+.schedule-lesson__cabinet--replace {
+  -moz-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  -o-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); }
+
+.schedule-note {
+  color: #d1d4d5;
+  font-size: 12px;
+  text-align: center; }
+
+.schedule-note--holiday {
+  color: #ac7d99; }
+
+.schedule-total {
+  color: #5a5a5a;
+  margin: 18px 0 33px; }
+
+.schedule-total__title {
+  font-weight: 600; }
+
+.lesson-popup:hover .lesson-popup__title, .lesson-popup--active .lesson-popup__title {
+  opacity: .8; }
+  .lesson-popup:hover .lesson-popup__title .lesson-title, .lesson-popup--active .lesson-popup__title .lesson-title {
+    color: #00bbe7; }
+
+.lesson-popup {
+  display: none;
+  position: absolute;
+  z-index: 5;
+  text-align: left;
+  width: 250px;
+  padding: 14px 20px 25px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #00bae5;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  bottom: auto; }
+
+.lesson-popup--1 {
+  background: white; }
+  .lesson-popup--1:after, .lesson-popup--1:before {
+    right: 100%;
+    top: 30px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none; }
+  .lesson-popup--1:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-right-color: white;
+    border-width: 7px;
+    margin-top: -7px; }
+  .lesson-popup--1:before {
+    border-color: rgba(0, 186, 229, 0);
+    border-right-color: #00bae5;
+    border-width: 8px;
+    margin-top: -8px; }
+
+.lesson-popup--2 {
+  background: #fff7de; }
+  .lesson-popup--2:after, .lesson-popup--2:before {
+    right: 100%;
+    top: 30px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none; }
+  .lesson-popup--2:after {
+    border-color: rgba(255, 247, 222, 0);
+    border-right-color: #fff7de;
+    border-width: 7px;
+    margin-top: -7px; }
+  .lesson-popup--2:before {
+    border-color: rgba(0, 186, 229, 0);
+    border-right-color: #00bae5;
+    border-width: 8px;
+    margin-top: -8px; }
+
+.lesson-popup--3 {
+  background: #f0f0f0; }
+  .lesson-popup--3:after, .lesson-popup--3:before {
+    right: 100%;
+    top: 30px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none; }
+  .lesson-popup--3:after {
+    border-color: rgba(240, 240, 240, 0);
+    border-right-color: #f0f0f0;
+    border-width: 7px;
+    margin-top: -7px; }
+  .lesson-popup--3:before {
+    border-color: rgba(0, 186, 229, 0);
+    border-right-color: #00bae5;
+    border-width: 8px;
+    margin-top: -8px; }
+
+.lesson-popup__close-btn-section {
+  text-align: right; }
+
+.lesson-popup__close-btn {
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #d1d3d4;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #eef1f4;
+  background-color: rgba(238, 241, 244, 0.4);
+  -webkit-box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.75);
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.75);
+  height: 25px;
+  line-height: 23px;
+  padding: 0 14px;
+  color: #333333;
+  font-size: 13px;
+  font-weight: 600;
+  -moz-text-shadow: 0 1px 0 black;
+  -o-text-shadow: 0 1px 0 black;
+  text-shadow: 0 1px 0 black; }
+  .lesson-popup__close-btn:hover {
+    cursor: pointer; }
+
+.lesson-popup--left {
+  left: 15px;
+  right: auto; }
+
+.lesson-popup--right {
+  right: -250px;
+  left: auto; }
+
+.lesson-popup--bottom {
+  bottom: 0;
+  top: auto; }
+
+.lesson-popup--top {
+  top: 0;
+  bottom: auto; }
+
+.lesson-popup--active {
+  display: block !important; }
+
+.lesson-popup__line {
+  width: 100%;
+  height: 1px;
+  margin-bottom: 7px;
+  background: #e3e5e6; }
+
+.lesson-popup__header {
+  color: #333333;
+  margin-bottom: 7px;
+  font-weight: 600; }
+
+.lesson-popup__descr {
+  font-size: 13px;
+  color: dimgrey;
+  margin-bottom: 10px;
+  line-height: 1.2; }
+
+.lesson-homework {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 15px;
+  position: relative;
+  font-size: 13px;
+  color: dimgrey; }
+
+.lesson-popup__descr--cabinet {
+  font-size: 14px; }
+
+.lesson-popup__homework {
+  margin-bottom: 10px; }
+
+.lesson-popup__line--small-margin {
+  margin-bottom: 5px; }
+
+.lesson-popup__header--small-margin {
+  margin-bottom: 5px; }
+
+.lesson-popup__replace {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333333;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 7px; }
+  .lesson-popup__replace:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 11px;
+    height: 14px;
+    background: url("../img/flag.png") 0 0 no-repeat;
+    z-index: 2; }
+
+.lesson-popup__title {
+  position: relative;
+  margin-bottom: 14px; }
+  .lesson-popup__title .lesson-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333333; }
+  .lesson-popup__title .lesson-title__cross-line {
+    font-weight: 400;
+    text-decoration: line-through; }
+  .lesson-popup__title .lesson-time {
+    font-size: 14px;
+    font-weight: 600;
+    color: #00aee0; }
+  .lesson-popup__title .lesson-time__cross-line {
+    font-weight: 400;
+    text-decoration: line-through; }
+  .lesson-popup__title:before {
+    top: 50%;
+    margin-top: -6.5px;
+    right: 0;
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 13px;
+    background: url("../img/arrow.png") 0 0 no-repeat; }

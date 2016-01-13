@@ -1,5 +1,4 @@
 %text-overflow {
-  display: block;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -21,6 +20,14 @@ input {
   outline: 0;
   outline-width: 0;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@mixin linear-gradient($grad-params...) {
+  background: -moz-linear-gradient($grad-params);
+  background: -webkit-linear-gradient($grad-params);
+  background: -o-linear-gradient($grad-params);
+  background: -ms-linear-gradient($grad-params);
+  background: linear-gradient($grad-params);
 }
 
 // Mixin declaration

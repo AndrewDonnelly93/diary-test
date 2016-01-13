@@ -18,17 +18,17 @@
 
       <div class="schedule-marks schedule-marks--right">
         <div class="schedule-marks__mark schedule-marks__mark--left">
-          <div class="color-mark color-mark--left color-mark--green"></div><!--
+          <div class="color-mark color-mark--left color-mark--plan"></div><!--
           --><div class="schedule-mark__text">По плану</div>
         </div><!--
 
         --><div class="schedule-marks__mark schedule-marks__mark--left">
-          <div class="color-mark color-mark--left color-mark--yellow"></div><!--
+          <div class="color-mark color-mark--left color-mark--replace"></div><!--
           --><div class="schedule-mark__text">Изменения</div>
         </div><!--
 
         --><div class="schedule-marks__mark schedule-marks__mark--left">
-          <div class="color-mark color-mark--left color-mark--silver"></div><!--
+          <div class="color-mark color-mark--left color-mark--abort"></div><!--
           --><div class="schedule-mark__text">Отмена</div>
         </div>
       </div>
@@ -86,7 +86,7 @@
             </td>
 
             <td class="schedule-hour-row__lesson-cell schedule-hour-row__lesson-cell--current schedule--tuesday">
-              <section class="schedule-lesson schedule-lesson--30">
+              <section class="schedule-lesson schedule-lesson--30  schedule-lesson--plan">
                 <div class="schedule-lesson__time">8:30-9:10</div>
                 <div class="schedule-lesson__subject-class">Биология, 8А</div>
                 <div class="schedule-lesson__cabinet">Каб. 103</div>
@@ -94,7 +94,7 @@
             </td>
 
             <td class="schedule-hour-row__lesson-cell schedule--wednesday">
-              <section class="schedule-lesson schedule-lesson--30">
+              <section class="schedule-lesson schedule-lesson--30 schedule-lesson--plan">
                 <div class="schedule-lesson__time">8:30-9:10</div>
                 <div class="schedule-lesson__subject-class">Биология, 8А</div>
                 <div class="schedule-lesson__cabinet">Каб. 103</div>
@@ -102,7 +102,7 @@
             </td>
 
             <td class="schedule-hour-row__lesson-cell schedule--thursday">
-              <section class="schedule-lesson schedule-lesson--30">
+              <section class="schedule-lesson schedule-lesson--30 schedule-lesson--plan">
                 <div class="schedule-lesson__time">8:30-9:10</div>
                 <div class="schedule-lesson__subject-class">Биология, 8А</div>
                 <div class="schedule-lesson__cabinet">Каб. 103</div>
@@ -113,11 +113,282 @@
 
             <td class="schedule-hour-row__lesson-cell schedule--saturday"></td>
 
-            <td class="schedule-hour-row__lesson-cell schedule-hour-row__lesson-cell--holiday schedule--sunday">
+            <td class="schedule-hour-row__lesson-cell schedule-hour-row__lesson-cell--holiday schedule--sunday"></td>
+          </tr>
+
+          <tr class="schedule-hour-row">
+            <td class="schedule-hour-row__lesson-cell schedule--monday">
+              <div class="schedule-hour-time">09:00</div>
             </td>
+
+            <td class="schedule-hour-row__lesson-cell schedule-hour-row__lesson-cell--current schedule--tuesday">
+            </td>
+
+            <td class="schedule-hour-row__lesson-cell schedule--wednesday">
+              <section class="schedule-lesson schedule-lesson--15 schedule-lesson--plan">
+                <div class="schedule-lesson__time">9:15-9:55</div>
+                <div class="schedule-lesson__subject-class">Биология, 8А</div>
+                <div class="schedule-lesson__cabinet">Каб. 103</div>
+              </section>
+            </td>
+
+            <td class="schedule-hour-row__lesson-cell schedule--thursday">
+              <section class="schedule-lesson schedule-lesson--15 schedule-lesson--plan">
+                <div class="schedule-lesson__time">9:15-9:55</div>
+                <div class="schedule-lesson__subject-class">ОБЖ, 9Б</div>
+                <div class="schedule-lesson__cabinet">Каб. 211</div>
+              </section>
+            </td>
+
+            <td class="schedule-hour-row__lesson-cell schedule--friday"></td>
+
+            <td class="schedule-hour-row__lesson-cell schedule--saturday">
+              <section class="schedule-lesson schedule-lesson--15 schedule-lesson--abort">
+                <div class="schedule-lesson__time schedule-lesson__time--abort">9:15-9:55</div>
+                <div class="schedule-lesson__subject-class schedule-lesson__subject-class--abort">
+                  Человек&nbsp;и общество,&nbsp;8А
+                </div>
+                <div class="schedule-lesson__cabinet schedule-lesson__cabinet--abort">Каб. 326</div>
+
+                <article class="lesson-popup lesson-popup--1 lesson-popup--right lesson-popup--top">
+                  <div class="lesson-popup__title">
+                    <div class="lesson-title">
+                      Информатика, 8А
+                    </div>
+                    <div class="lesson-time">
+                      <span class="lesson-time__cross-line">14:00-15:30</span><br>
+                      14:00-15:30, 12 сентября
+                    </div>
+                  </div>
+                  <section class="lesson-popup__close-btn-section">
+                    <div class="lesson-popup__close-btn">Закрыть</div>
+                  </section>
+                </article>
+              </section>
+            </td>
+
+            <td class="schedule-hour-row__lesson-cell schedule-hour-row__lesson-cell--holiday schedule--sunday"></td>
+          </tr>
+
+          <tr class="schedule-hour-row">
+            <td class="schedule-hour-row__lesson-cell schedule--monday">
+              <div class="schedule-hour-time">10:00</div>
+              <div class="schedule-current-time schedule-current-time--20"></div>
+            </td>
+
+            <td class="schedule-hour-row__lesson-cell schedule-hour-row__lesson-cell--current schedule--tuesday">
+            </td>
+
+            <td class="schedule-hour-row__lesson-cell schedule--wednesday">
+            </td>
+
+            <td class="schedule-hour-row__lesson-cell schedule--thursday">
+              <section class="schedule-lesson schedule-lesson--5 schedule-lesson--plan schedule-lesson--double">
+                <div class="schedule-lesson__time">10:05-10:45</div>
+                <div class="schedule-lesson__subject-class">Биология, 8Б</div>
+                <div class="schedule-lesson__cabinet">Каб. 102</div>
+              </section>
+            </td>
+
+            <td class="schedule-hour-row__lesson-cell schedule--friday"></td>
+
+            <td class="schedule-hour-row__lesson-cell schedule--saturday"></td>
+
+            <td class="schedule-hour-row__lesson-cell schedule-hour-row__lesson-cell--holiday schedule--sunday"></td>
+          </tr>
+
+          <tr class="schedule-hour-row">
+            <td class="schedule-hour-row__lesson-cell schedule--monday">
+              <div class="schedule-hour-time">11:00</div>
+              <section class="schedule-lesson schedule-lesson--5 schedule-lesson--plan">
+                <div class="schedule-lesson__time">11:05-11:45</div>
+                <div class="schedule-lesson__subject-class">Биология, 8А</div>
+                <div class="schedule-lesson__cabinet">Каб. 103</div>
+              </section>
+              <section class="schedule-lesson schedule-lesson--55 schedule-lesson--plan">
+                <article class="lesson-popup lesson-popup--3 lesson-popup--right lesson-popup--top">
+                  <div class="lesson-popup__title">
+                    <div class="lesson-title">
+                      Человек и общество,<br>
+                      8А (мальчики)
+                    </div>
+                    <div class="lesson-time">
+                      <span class="lesson-time__cross-line">14:00-15:30</span><br>
+                      14:00-15:30, 12 сентября
+                    </div>
+                  </div>
+                  <div class="lesson-popup__line"></div>
+                  <div class="lesson-popup__header">
+                    Тема урока
+                  </div>
+                  <div class="lesson-popup__descr">
+                    Кодирование как изменение формы представления информации. Компьютерная графика. ПР №10.
+                  </div>
+                  <div class="lesson-popup__line"></div>
+                  <div class="lesson-popup__replace">Замена времени проведения</div>
+                  <section class="lesson-popup__close-btn-section">
+                    <div class="lesson-popup__close-btn">Закрыть</div>
+                  </section>
+                </article>
+
+                <div class="schedule-lesson__time">11:55-12:35</div>
+                <div class="schedule-lesson__subject-class">Биология, 8Б</div>
+                <div class="schedule-lesson__cabinet">Каб. 211</div>
+              </section>
+            </td>
+
+            <td class="schedule-hour-row__lesson-cell schedule-hour-row__lesson-cell--current schedule--tuesday"></td>
+
+            <td class="schedule-hour-row__lesson-cell schedule--wednesday">
+              <section class="schedule-lesson schedule-lesson--5 schedule-lesson--plan">
+                <div class="schedule-lesson__time">11:05-11:45</div>
+                <div class="schedule-lesson__subject-class">Биология, 8Б</div>
+                <div class="schedule-lesson__cabinet">Каб. 205</div>
+              </section>
+            </td>
+
+            <td class="schedule-hour-row__lesson-cell schedule--thursday"></td>
+
+            <td class="schedule-hour-row__lesson-cell schedule--friday">
+              <section class="schedule-lesson schedule-lesson--5 schedule-lesson--replace">
+                <div class="schedule-lesson__time schedule-lesson__time--replace">14:00-15:30</div>
+                <div class="schedule-lesson__subject-class schedule-lesson__subject-class--replace">Биология, 8Б</div>
+                <div class="schedule-lesson__cabinet schedule-lesson__cabinet--replace">Каб. 205</div>
+                <article class="lesson-popup lesson-popup--2 lesson-popup--right lesson-popup--top">
+                  <div class="lesson-popup__title">
+                    <div class="lesson-title">
+                      Изо, 8А <span class="lesson-title__cross-line">(мальчики)</span><br>
+                      девочки
+                    </div>
+                    <div class="lesson-time">
+                      <span class="lesson-time__cross-line">14:00-15:30</span>
+                      14:00-15:30
+                    </div>
+                  </div>
+                  <div class="lesson-popup__line"></div>
+                  <div class="lesson-popup__header">
+                    Тема урока
+                  </div>
+                  <div class="lesson-popup__descr">
+                    Кодирование как изменение формы представления информации. Компьютерная графика. ПР №10.
+                  </div>
+                  <section class="lesson-popup__close-btn-section">
+                    <div class="lesson-popup__close-btn">Закрыть</div>
+                  </section>
+                </article>
+              </section>
+            </td>
+
+            <td class="schedule-hour-row__lesson-cell schedule--saturday"></td>
+
+            <td class="schedule-hour-row__lesson-cell schedule-hour-row__lesson-cell--holiday schedule--sunday">
+              <div class="schedule-note schedule-note--holiday">Праздничный день</div>
+            </td>
+          </tr>
+
+          <tr class="schedule-hour-row">
+            <td class="schedule-hour-row__lesson-cell schedule--monday">
+              <div class="schedule-hour-time">12:00</div>
+              <section class="schedule-lesson schedule-lesson--55 schedule-lesson--plan">
+                <div class="schedule-lesson__time">12:55-13:35</div>
+                <div class="schedule-lesson__subject-class">Биология, 8В</div>
+                <div class="schedule-lesson__cabinet">Каб. 205</div>
+              </section>
+            </td>
+
+            <td class="schedule-hour-row__lesson-cell schedule-hour-row__lesson-cell--current schedule--tuesday"></td>
+
+            <td class="schedule-hour-row__lesson-cell schedule--wednesday"></td>
+
+            <td class="schedule-hour-row__lesson-cell schedule--thursday"></td>
+
+            <td class="schedule-hour-row__lesson-cell schedule--friday"></td>
+
+            <td class="schedule-hour-row__lesson-cell schedule--saturday"></td>
+
+            <td class="schedule-hour-row__lesson-cell schedule-hour-row__lesson-cell--holiday schedule--sunday"></td>
+          </tr>
+
+          <tr class="schedule-hour-row">
+            <td class="schedule-hour-row__lesson-cell schedule--monday">
+              <div class="schedule-hour-time">13:00</div>
+              <section class="schedule-lesson schedule-lesson--55 schedule-lesson--active">
+                <div class="schedule-lesson__subject-class schedule-lesson__subject-class--active">Биология, 9Б</div>
+                <div class="schedule-lesson__cabinet schedule-lesson__cabinet--active">Каб. 220</div>
+
+                <article class="lesson-popup lesson-popup--left lesson-popup--bottom lesson-popup--1">
+                  <div class="lesson-popup__title">
+                    <div class="lesson-title">Информатика, 8А</div>
+                    <div class="lesson-time">14:00-15:30</div>
+                  </div>
+                  <div class="lesson-popup__line"></div>
+                    <div class="lesson-popup__header">
+                      Тема урока
+                    </div>
+                    <div class="lesson-popup__descr">
+                      Кодирование как изменение формы представления информации. Компьютерная графика. ПР №10.
+                    </div>
+                  <div class="lesson-popup__line"></div>
+                  <section class="lesson-popup__homework">
+                    <div class="lesson-popup__header">
+                      Дом. задание
+                    </div>
+                    <div class="lesson-homework">
+                      <div class="color-mark color-mark__homework--1"></div>
+                      Пройти тест параграфы 1, 2, 3, упражнения
+                    </div>
+                    <div class="lesson-homework">
+                      <div class="color-mark color-mark__homework--2"></div>
+                      Пройти тест параграфы 1, 2, 3, упражнения
+                    </div>
+                  </section>
+                  <div class="lesson-popup__line lesson-popup__line--small-margin"></div>
+                    <div class="lesson-popup__header lesson-popup__header--small-margin">Кабинет:
+                      <span class="lesson-popup__descr--cabinet">234</span>
+                    </div>
+                  <section class="lesson-popup__close-btn-section">
+                    <div class="lesson-popup__close-btn">Закрыть</div>
+                  </section>
+                </article>
+
+              </section>
+            </td>
+
+            <td class="schedule-hour-row__lesson-cell schedule-hour-row__lesson-cell--current schedule--tuesday"></td>
+
+            <td class="schedule-hour-row__lesson-cell schedule--wednesday"></td>
+
+            <td class="schedule-hour-row__lesson-cell schedule--thursday"></td>
+
+            <td class="schedule-hour-row__lesson-cell schedule--friday"></td>
+
+            <td class="schedule-hour-row__lesson-cell schedule--saturday"></td>
+
+            <td class="schedule-hour-row__lesson-cell schedule-hour-row__lesson-cell--holiday schedule--sunday"></td>
+          </tr>
+
+          <tr class="schedule-hour-row">
+            <td class="schedule-hour-row__lesson-cell schedule--monday">
+              <div class="schedule-hour-time">14:00</div>
+            </td>
+
+            <td class="schedule-hour-row__lesson-cell schedule-hour-row__lesson-cell--current schedule--tuesday"></td>
+
+            <td class="schedule-hour-row__lesson-cell schedule--wednesday"></td>
+
+            <td class="schedule-hour-row__lesson-cell schedule--thursday"></td>
+
+            <td class="schedule-hour-row__lesson-cell schedule--friday"></td>
+
+            <td class="schedule-hour-row__lesson-cell schedule--saturday"></td>
+
+            <td class="schedule-hour-row__lesson-cell schedule-hour-row__lesson-cell--holiday schedule--sunday"></td>
           </tr>
         </tbody>
       </table>
+
+      <div class="schedule-total"><span class="schedule-total__title">Неделя:</span> всего 33 урока по плану,
+        1 замена, 1 отмена</div>
     </div>
   </section>
   <script src="javascripts/main.js"></script>

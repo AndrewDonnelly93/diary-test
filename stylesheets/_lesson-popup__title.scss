@@ -1,0 +1,44 @@
+$lesson-popup__title-arrow-w: 8px;
+$lesson-popup__title-arrow-h: 13px;
+
+.lesson-popup__title {
+  .lesson-title {
+    font: {
+      size: 18px;
+      weight: 600;
+    }
+    margin-bottom: 5px;
+    color: $other-black;
+  }
+
+  .lesson-title__cross-line {
+    font-weight: 400;
+    text-decoration: line-through;
+  }
+
+  .lesson-time {
+    font: {
+      size: 14px;
+      weight: 600;
+    }
+    color: $light-blue;
+  }
+
+  .lesson-time__cross-line {
+    font-weight: 400;
+    text-decoration: line-through;
+  }
+
+  position: relative;
+  margin-bottom: 14px;
+
+  &:before {
+    top: 50%;
+    margin-top: - .5 * $lesson-popup__title-arrow-h;
+    right: 0;
+    position: absolute;
+    content: "";
+    @include size($lesson-popup__title-arrow-w, $lesson-popup__title-arrow-h);
+    background: url("../img/arrow.png") 0 0 no-repeat;
+  }
+}
